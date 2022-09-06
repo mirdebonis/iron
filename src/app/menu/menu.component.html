@@ -1,0 +1,9 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" style="margin-bottom: 3%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">IRON SITE</a>
+    <a class="nav-link float-left active" style="color: white;" aria-current="page" href="">Home</a>
+    <a class="nav-link float-left" style="color: white;" href="users">Users</a>
+    <a class="nav-link float-left" style="color: white;" href="dashboard">Dashboard</a>
+    <a *ngIf="currentUser" class="nav-link" style="color: white;" href="" (click)="logout()">Sign-out</a>
+  </div>
+</nav>

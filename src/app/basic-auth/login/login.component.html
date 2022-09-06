@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-9 col-lg-7 col-xl-6 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title mb-4 mt-1">Sign in</h4>
+          <hr>
+          <form class="form-horizontal" novalidate (ngSubmit)="login()" #loginForm="ngForm" autocomplete="off">
+            <fieldset>
+              <div class="form-group row" style="margin-bottom: 2%;"
+                [ngClass]="{'has-error': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid}">
+
+                <label for="username" class="col-md-5 col-form-label text-md-right">Username</label>
+                <div class="col-md-7">
+                  <input id="username" class="form-control" id="userNameId" type="text"
+                    placeholder="UserName (required)" required [(ngModel)]="userName" name="userName"
+                    #userNameVar="ngModel" maxlength="255" />
+                  <span class="help-block" *ngIf="(userNameVar.touched || userNameVar.dirty) && userNameVar.errors">
+                    <div *ngIf="userNameVar.errors" class="alert alert-danger">
+                      <span>Required Field</span>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group row" style="margin-bottom: 2%;"
+                [ngClass]="{'has-error': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid}">
+                <label for="password" class="col-md-5 col-form-label text-md-right">Password</label>
+                <div class="col-md-7">
+                  <input class="form-control" id="password" type="password" placeholder="Password (required)" required
+                    [(ngModel)]="password" name="password" #passwordVar="ngModel" maxlength="255" />
+                  <span class="help-block" *ngIf="(passwordVar.touched || passwordVar.dirty) && passwordVar.errors">
+                    <div *ngIf="passwordVar.errors" class="alert alert-danger">
+                      <span>Required Field</span>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <p>
+                <button class="btn btn-block btn-primary" type="submit" [disabled]="!loginForm.form.valid">
+                  Login
+                </button>
+              </p>
+              <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

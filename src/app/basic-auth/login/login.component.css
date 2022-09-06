@@ -1,0 +1,16 @@
+.dashboard {
+  padding: 0;
+  padding-bottom: 0;
+}
+
+.box {
+  padding: 0.5cm;
+  height: 3.5cm;
+  color:#fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}

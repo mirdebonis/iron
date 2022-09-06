@@ -1,0 +1,109 @@
+.dashboard {
+  /* background-color: #1C534F; */
+  padding: 0;
+  padding-bottom: 0;
+}
+
+.box {
+  padding: 0.5cm;
+  height: 3.5cm;
+  background-color: var(--dark-iron);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.yellow-line {
+  text-decoration: underline var(--yellow-iron) !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.side-card-iron {
+  background: #F8F8F8;
+  width: 100%;
+  border-left-width: 6px;
+  border-style: solid;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(#086224), to(#5FD05C)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(#086224, #5FD05C) 1 100%;
+  -moz-border-image: -moz-linear-gradient(#086224, #5FD05C) 1 100%;
+  -o-border-image: -o-linear-gradient(#086224, #5FD05C) 1 100%;
+  border-image: linear-gradient(to bottom, #086224, #5FD05C) 1 71%;
+  border-right: 0px;
+}
+
+h4.side-card-iron-title {
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 1.3em;
+  color: #086224;
+}
+
+.side-card-iron-black {
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#8F8F8F)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(#000, #8F8F8F) 1 100%;
+  -moz-border-image: -moz-linear-gradient(#000, #8F8F8F) 1 100%;
+  -o-border-image: -o-linear-gradient(#000, #8F8F8F) 1 100%;
+  border-image: linear-gradient(to bottom, #000, #8F8F8F) 1 71%;
+}
+
+.side-card-iron-blue {
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(#074578), to(#70ACE3)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(#074578, #70ACE3) 1 100%;
+  -moz-border-image: -moz-linear-gradient(#074578, #70ACE3) 1 100%;
+  -o-border-image: -o-linear-gradient(#074578, #70ACE3) 1 100%;
+  border-image: linear-gradient(to bottom, #074578, #70ACE3) 1 71%;
+}
+
+.btn-iron-black {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-iron-blue {
+  color: #fff;
+  background-color: #074578;
+  border-color: #074578;
+}
+
+.btn-lg {
+  --bs-btn-padding-x: 5.5rem;
+}
+
+/*Su dispositivi minori di 768px */
+@media only screen and (max-width: 768px) {
+  .mt-iron {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h4.side-card-iron-title {
+    font-size: 0.8em;
+
+  }
+}
+
+@media (min-width: 992px) {
+  h4.side-card-iron-title {
+    font-size: 1.1em;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1360px !important;
+  }
+
+  .col-lg-3 {
+    max-width: 20% !important;
+  }
+
+  h4.side-card-iron-title {
+    font-size: 1.3em;
+  }
+}

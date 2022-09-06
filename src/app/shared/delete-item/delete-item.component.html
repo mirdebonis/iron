@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header bg-dark text-light">
+    <button type="button" class="bg-dark close float-right" style="border: none;" aria-label="Close"
+      (click)="dismissModal()">
+      <fa-icon [icon]="['fas', 'x']"></fa-icon>
+    </button>
+    <h4 class="modal-title iron-title mb-0 py-2 pb-xs-5">Delete {{title}}</h4>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label class="control-label" for="deleteId">Are you sure?</label>
+      <div class="iron-button" [hidden]="isBusy" id="deleteId">
+        <span>
+          <button class="btn btn-secondary" *ngIf="showAbortButton" data-dismiss="modal" (click)="dismissModal()">
+            {{ abortButtonTxt }}
+          </button>
+        </span>
+        <span>
+          <button class="btn btn-primary" style="margin-left: 5px;" (click)="confirmModal()">
+            {{ confirmButtonTxt }}
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

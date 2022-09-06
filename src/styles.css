@@ -1,0 +1,312 @@
+:root {
+  --primary: yellow-pirelli;
+  --secondary: red-pirelli;
+  --thirdly: $blue-pirelli;
+  --footer-heigth: 60px;
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('assets/fonts/Gotham-Medium/Gotham-Medium.eot');
+  src: url('assets/fonts/Gotham-Medium/Gotham-Medium.woff') format('woff'), url('assets/fonts/Gotham-Medium/Gotham-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Condensed-Light';
+  src: url('assets/fonts/GothamCondensed-Light/GothamCondensed-Light.eot');
+  src: url('assets/fonts/GothamCondensed-Light/GothamCondensed-Light.woff') format('woff'), url('assets/fonts/GothamCondensed-Light/GothamCondensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('assets/fonts/Gotham-Book/Gotham-Book.eot');
+  src: url('assets/fonts/Gotham-Book/Gotham-Book.woff') format('woff'), url('assets/fonts/Gotham-Book/Gotham-Book.ttf') format('truetype');
+}
+
+.footer-space{
+  margin-bottom: var(--footer-heigth) + 20px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.footer {
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-heigth);
+  line-height: var(--footer-heigth);
+  border-top: 3px solid var(--primary);
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.3);
+  color:#fff;
+}
+
+body {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  font-family: 'Gotham-Medium' !important;
+  overflow-x: hidden;
+}
+
+.btn.focus,.btn:active.focus,.btn.active.focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.iron-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  opacity: 1;
+  float: right;
+}
+
+.iron-button:hover {
+  opacity: 0.8;
+  transition: ease-in-out 0.2s;
+  -webkit-transition: ease-in-out 0.2s;
+}
+
+.card-title span {
+  border-bottom: 3px solid var(--primary);
+}
+
+.card-heading {
+  padding-bottom: 1.2rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.loader-overlay {
+  position: absolute;
+  width: 100%;
+  z-index: 500000;
+  top: 0;
+}
+
+.loader {
+  height: 5px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #262a2f;
+}
+
+.loader:before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0px;
+  width: 200px;
+  height: 5px;
+  border-radius: 10px;
+  animation: loading 2s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+.iron-title {
+  font-size: 1.1em !important;
+}
+
+.close {
+  color: #fff;
+  opacity: 1;
+}
+
+.iron-font-sm {
+  font-size: 0.9em !important;
+}
+
+.iron-header-title {
+  padding: 1rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef; /* #eee; */
+  border-radius: 0.3rem;
+}
+
+.iron-cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-iron {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.btn-iron.focus, .btn-iron:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.0rem;
+}
+
+.btn-outline-iron-properties {
+  border-color: #212529;
+  color: #212529;
+  background-color: transparent;
+  padding: .429rem 1rem;
+  line-height: 1.571429;
+}
+
+.btn-outline-iron-remove-filter {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: #e4eaec;
+  color: #212529;
+  background-color: transparent;
+  padding: .429rem 1rem;
+  line-height: 1.571429;
+}
+
+.form-control-iron {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 2rem);
+  padding: 1rem 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 0rem solid transparent;
+  border-radius: 0;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.form-control-iron-sm {
+  height: calc(1.5em + 0rem);
+  padding: 0 0;
+  font-size: 0.7109375rem;
+  line-height: 1.5;
+  border-radius: 0;
+}
+
+.form-control-iron:focus {
+  color: #495057;
+  background-color: transparent;
+  border: 0rem solid transparent;
+  outline: 0;
+}
+
+.form-control-iron-filter {
+  height: calc(1.5em + 1.32rem);
+  border-color: #e4eaec;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+select, select.form-control-iron {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.5rem 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEVmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaP/QSjAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+.was-validated .form-control-iron:invalid, .form-control-iron.is-invalid {
+  border-color: #e51c23;
+  padding-right: calc(1.5em + 2rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23e51c23' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e51c23' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.5rem) center;
+  background-size: calc(0.75em + 1rem) calc(0.75em + 1rem);
+}
+
+textarea, textarea.form-control-iron, input.form-control-iron, input[type=text], input[type=password], input[type=email], input[type=number], [type=text].form-control-iron, [type=password].form-control-iron, [type=email].form-control-iron, [type=tel].form-control-iron, [contenteditable].form-control-iron {
+  -webkit-box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: inset 0 -1px 0 #ddd;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.has-danger input:not([type=checkbox]), .has-danger .form-control-iron, .has-danger input.form-control-iron[readonly], .has-danger input[type=text][readonly], .has-danger [type=text].form-control-iron[readonly], .has-danger input:not([type=checkbox]):focus, .has-danger .form-control-iron:focus {
+  border-bottom: none;
+  -webkit-box-shadow: inset 0 -2px 0 #e51c23;
+  box-shadow: inset 0 -2px 0 #e51c23;
+}
+
+th[sortable] {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+th[sortable].desc:before, th[sortable].asc:before {
+  content: '';
+  display: block;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f077";
+  background-size: 22px;
+  fill:white;
+  width: 22px;
+  height: 22px;
+  float: right;
+  /* margin-left: -22px; */
+}
+
+th[sortable].desc:before {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+.btn-export {
+  background-color: DodgerBlue;
+  border:rgba(0, 0, 0, 0.19);
+  color: white;
+  cursor: pointer;
+}
+
+/* .btn-export:hover {
+  background-color: RoyalBlue;
+} */
+
+
+.form-control-iron-inline {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 2rem);
+  padding: 1rem 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 0rem solid transparent;
+  border-radius: 0;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  box-shadow: inset 0 0px 0 #ddd !important;
+}
+
+.form-control-iron-inline-sm {
+  height: calc(1.5em + 1.3rem);
+  padding: 0 0;
+  font-size: 0.7109375rem;
+  line-height: 1.5;
+  border-radius: 0;
+}
+
+.form-control-iron-inline-pl {
+  padding-left: 10px;
+}

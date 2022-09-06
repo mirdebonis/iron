@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header bg-dark text-light">
+    <button type="button" class="close" aria-label="Close" (click)="dismissModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title iron-title mb-0 py-2 pb-xs-5">{{title}}</h4>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label class="control-label d-block" for="deleteId">The changes you made may not be saved. Are you sure?</label>
+      <div class="iron-button" [hidden]="isBusy" id="deleteId">
+        <span>
+          <button class="btn btn-secondary" *ngIf="showAbortButton" data-dismiss="modal" (click)="dismissModal()">
+            {{ abortButtonTxt }}
+          </button>
+        </span>
+        <span>
+          <button class="btn btn-primary ml-2" (click)="confirmModal()">
+            {{ confirmButtonTxt }}
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
